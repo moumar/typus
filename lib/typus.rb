@@ -104,6 +104,7 @@ module Typus
     # initializer with all configuration values.
     def setup
       yield self
+      reload!
     end
 
     def root
@@ -185,5 +186,3 @@ module Typus
   end
 
 end
-
-Typus.reload!
