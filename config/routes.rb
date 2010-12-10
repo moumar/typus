@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  admin_prefix = "staff"
+  admin_prefix = "admin"
 
   scope admin_prefix, :module => :admin, :as => "admin" do
 
