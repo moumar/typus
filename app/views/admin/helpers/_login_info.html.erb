@@ -1,4 +1,4 @@
 <ul>
-  <li><%= _t("Logged as") %> <%= link_to current_user.name, { :controller => "/admin/#{Typus.user_class.to_resource}", :action => 'edit', :id => current_user.id } %></li>
+  <li><%= _t("Logged as") %> <%= link_to current_user.name, { :controller => "resources", :model_name => Typus.user_class.to_resource, :action => 'edit', :id => current_user.id } %></li>
   <li><%= link_to _t("Sign out"), admin_session_path, :confirm => _t("Are you sure you want to sign out and end your session?"), :method => :delete %></li>
 </ul>

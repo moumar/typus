@@ -9,7 +9,7 @@ class String
   end
 
   def extract_class
-    remove_prefix.classify.typus_constantize
+    classify.typus_constantize
   end
 
   def typus_constantize

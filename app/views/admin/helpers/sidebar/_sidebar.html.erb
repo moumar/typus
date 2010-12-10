@@ -5,7 +5,7 @@
     resource = "/admin/#{klass.to_resource}"
   %>
 
-  <%= link_to :controller => resource, :action => "index" do %>
+  <%= link_to :controller => 'resources', :model_name => klass.to_resource, :action => "index" do %>
     <h3><%= _t(klass.model_name.human.pluralize) %></h3>
   <% end %>
 

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  scope "admin", :module => :admin, :as => "admin" do
+  admin_prefix = "staff"
 
-    match "/" => redirect("/admin/dashboard")
+  scope admin_prefix, :module => :admin, :as => "admin" do
+
+    match "/" => redirect("/#{admin_prefix}/dashboard")
     match "help" => "base#help"
 
     resource :dashboard, :only => [:show], :controller => :dashboard
@@ -14,8 +16,10 @@ Rails.application.routes.draw do
       end
     end
 
-  end
+    controller "resources" do
+      match "/:model_name/(:action(/:id(.:format)))"
+    end
 
-  match ':controller(/:action(/:id(.:format)))', :controller => /admin\/[^\/]+/
+  end
 
 end

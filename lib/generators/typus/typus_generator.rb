@@ -1,5 +1,4 @@
 require "rails/generators/migration"
-require "generators/typus/controller_generator"
 
 module Typus
 
@@ -36,12 +35,6 @@ Description:
       def copy_assets
         Dir["#{templates_path}/public/**/*.*"].each do |file|
           copy_file file.split("#{templates_path}/").last
-        end
-      end
-
-      def generate_controllers
-        Typus.application_models.each do |model|
-          Typus::Generators::ControllerGenerator.new([model.pluralize]).invoke_all
         end
       end
 

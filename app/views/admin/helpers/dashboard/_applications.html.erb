@@ -13,7 +13,7 @@
       <%
         klass = model.typus_constantize
         klass_human_name = klass.model_name.human.gsub("/", " ").pluralize
-        admin_items_path = { :controller => "/admin/#{klass.to_resource}" }
+        admin_items_path = { :controller => "resources", :model_name => klass.to_resource }
       %>
 
       <tr class="<%= cycle("even", "odd") %>">

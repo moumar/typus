@@ -63,14 +63,6 @@ Examples:
         template "config/typus/typus_roles.yml", "config/typus/typus_roles.yml"
       end
 
-      def generate_controllers
-        invoke "controller", ["admin/#{admin_users_table_name}"]
-      end
-
-      def make_controllers_inherit_from_resources_controller
-        gsub_file "app/controllers/admin/#{admin_users_table_name}_controller.rb", /ApplicationController/, "Admin::ResourcesController"
-      end
-
       def generate_migration
         migration_template "migration.rb", "db/migrate/create_#{admin_users_table_name}"
       end

@@ -79,7 +79,7 @@ module Admin
     end
 
     def build_add_new(options = {})
-      default_options = { :controller => "/admin/#{@field}", :action => "new",
+      default_options = { :controller => "resources", :model_name => @field, :action => "new",
                           :resource => @resource.to_resource.singularize, :resource_id => @item.id,
                           :back_to => @back_to }
 
@@ -118,7 +118,7 @@ module Admin
 <a name="#{field}"></a>
 <div class="box_relationships" id="#{model_to_relate_as_resource}">
   <h2>
-  #{link_to model_to_relate.model_name.human, :controller => "/admin/#{model_to_relate_as_resource}"}
+  #{link_to model_to_relate.model_name.human, :controller => "resources", :model_name => model_to_relate_as_resource}
   </h2>
       HTML
       items = Array.new
@@ -164,7 +164,7 @@ module Admin
         options = { :resource => @resource.to_resource }
       end
 
-      default = { :controller => "/admin/#{related.to_resource}", :action => 'new', :back_to => back_to }
+      default = { :controller => "resources", :model_name => related.to_resource, :action => 'new', :back_to => back_to }
 
       if current_user.can?('create', related)
         message = link_to _t("Add"), default.merge(options)

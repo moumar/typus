@@ -45,7 +45,7 @@ class Admin::ResourcesController < Admin::BaseController
 
   def new
     item_params = params.dup
-    rejections = %w(controller action resource resource_id back_to selected)
+    rejections = %w(controller action resource resource_id back_to selected model_name)
     item_params.delete_if { |k, v| rejections.include?(k) }
     @item = @resource.new(item_params)
   end
@@ -182,7 +182,7 @@ class Admin::ResourcesController < Admin::BaseController
   private
 
   def get_model
-    @resource = params[:controller].extract_class
+    @resource = params[:model_name].extract_class
     @object_name = ActiveModel::Naming.singular(@resource)
   end
 

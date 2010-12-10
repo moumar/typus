@@ -79,7 +79,8 @@ module Admin
                  default_action
                end
 
-      options = { :controller => "/admin/#{item.class.to_resource}",
+      options = { :controller => "resources",
+                  :model_name => item.class.to_resource,
                   :action => action,
                   :id => item.id }
 
@@ -125,7 +126,7 @@ module Admin
       if att_value = item.send(attribute)
         action = item.send(attribute).class.typus_options_for(:default_action_on_item)
         if current_user.can?(action, att_value.class.name)
-          link_to att_value.to_label, :controller => "/admin/#{att_value.class.to_resource}", :action => action, :id => att_value.id
+          link_to att_value.to_label, :controller => "resources", :model_name => att_value.class.to_resource, :action => action, :id => att_value.id
         else
           att_value.to_label
         end
@@ -158,7 +159,7 @@ module Admin
       html_position = []
 
       { :move_higher => "Up", :move_lower => "Down" }.each do |key, value|
-        options = { :controller => "/admin/#{item.class.to_resource}", :action => "position", :id => item.id, :go => key }
+        options = { :controller => "resources", :model_name => item.class.to_resource, :action => "position", :id => item.id, :go => key }
         first_or_last = (item.respond_to?(:first?) && (key == :move_higher && item.first?)) || (item.respond_to?(:last?) && (key == :move_lower && item.last?))
         html_position << link_to_unless(first_or_last, _t(value), params.merge(options)) do |name|
           raw %(<span class="inactive">#{name}</span>)
@@ -184,7 +185,8 @@ module Admin
         Typus::Resources.human_nil
       else
         message = _t(boolean_hash[status.to_s])
-        options = { :controller => "/admin/#{item.class.to_resource}",
+        options = { :controller => "resources",
+                    :model_name => item.class.to_resource,
                     :action => "toggle",
                     :id => item.id,
                     :field => attribute.gsub(/\?$/, '') }
