@@ -29,4 +29,8 @@ Typus.setup do |config|
   # Define available languages on the admin interface.
   # config.available_locales = [:en]
 
+  # Define application prefix. This means where the application will be
+  # available at. By default "/admin".
+  # config.prefix = "admin"
+
 end

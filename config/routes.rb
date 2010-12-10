@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
-  admin_prefix = "admin"
+  scope Typus.prefix, :module => :admin, :as => "admin" do
 
-  scope admin_prefix, :module => :admin, :as => "admin" do
-
-    match "/" => redirect("/#{admin_prefix}/dashboard")
+    match "/" => redirect("/#{Typus.prefix}/dashboard")
     match "help" => "base#help"
 
     resource :dashboard, :only => [:show], :controller => :dashboard

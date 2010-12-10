@@ -112,6 +112,9 @@ module Typus
   mattr_accessor :available_locales
   @@available_locales = [:en]
 
+  mattr_accessor :prefix
+  @@prefix = "admin"
+
   class << self
 
     # Default way to setup typus. Run `rails generate typus` to create a fresh
