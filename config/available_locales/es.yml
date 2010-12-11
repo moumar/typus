@@ -67,7 +67,7 @@ es:
   "Today": "Hoy"
   "True": "Verdadero"
 
-  "Unrelate %{resource}?": "Desvincular %{resource}?"
+  "Unrelate": "Desvincular"
   "Up": "Subir"
 
   "You can update your password at": "Puedes actualizar tu contraseña en"

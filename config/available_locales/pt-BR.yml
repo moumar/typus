@@ -67,7 +67,7 @@ pt-BR:
   "Today": "Hoje"
   "True": "Verdadeiro"
 
-  "Unrelate %{resource}?": "Desvincular %{resource}?"
+  "Unrelate": "Desvincular"
   "Up": "Subir"
 
   "View all %{attribute}":

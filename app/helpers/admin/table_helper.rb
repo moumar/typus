@@ -114,7 +114,7 @@ module Admin
                     end
       end
 
-      confirm = _t("#{action.titleize} %{resource}?", :resource => model.model_name.human)
+      confirm = _t(action.titleize) + model.model_name.human + "?"
 
       if condition
         link_to _t(action.titleize), options, :title => _t(action.titleize), :confirm => confirm, :method => method

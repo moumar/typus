@@ -67,7 +67,7 @@ ca:
   "Today": "Avui"
   "True": "Cert"
 
-  "Unrelate %{resource}?": "Deslligar %{resource}?"
+  "Unrelate": "Deslligar"
   "Up": "Pujar"
 
   "You can update your password at": "Pots actualitzar la teva contrasenya a"

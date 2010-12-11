@@ -76,7 +76,7 @@ it:
   "Trash": "Elimina"
   "True": "Vero"
 
-  "Unrelate %{resource}?":
+  "Unrelate":
   "Up": "Su"
 
   "View all %{attribute}": "Filtra per %{attribute}"

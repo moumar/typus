@@ -68,7 +68,7 @@ el:
   "Today": "Σήμερα"
   "True": "Σωστό"
 
-  "Unrelate %{resource}?":
+  "Unrelate":
   "Up": "Επάνω"
 
   "View all %{attribute}": "Εμφάνιση όλων των χαρακτηριστικών τύπου %{attribute}"

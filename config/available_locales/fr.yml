@@ -11,6 +11,8 @@ fr:
   "Are you sure?": "Êtes-vous sûre ?"
   "Are you sure you want to sign out and end your session?": "Etes-vous sûre de vouloir vous déconnecter et mettre fin à votre session ?"
 
+  "Bottom": "À la fin"
+
   "Change %{attribute}?": "Changer %{attribute} ?"
   "Create %{resource}": "Créer %{resource}"
 
@@ -67,10 +69,12 @@ fr:
   "Sign up": "Ouvrir un compte"
   "System Users Administration": "Modifier les utilisateurs de l'admin"
 
-  "Today": "Ajourd'hui"
+  "Today": "Aujourd'hui"
+  "Top": "Au début"
+  "Trash": "Supprimer"
   "True": "Vrai"
 
-  "Unrelate %{resource}?": "Dissocier %{resource}?"
+  "Unrelate": "Dissocier"
   "Up": "Monter"
 
   "View all %{attribute}": "Voir tou(s/tes) %{attribute}"

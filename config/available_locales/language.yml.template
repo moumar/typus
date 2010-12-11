@@ -64,9 +64,10 @@
   "System Users Administration":
 
   "Today":
+  "Trash":
   "True":
 
-  "Unrelate %{resource}?":
+  "Unrelate":
   "Up":
 
   "View all %{attribute}":
