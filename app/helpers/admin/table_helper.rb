@@ -139,7 +139,7 @@ module Admin
     end
 
     def table_string_field(attribute, item, link_options = {})
-      (raw_content = item.send(attribute)).present? ? raw_content : "&#mdash;".html_safe
+      (raw_content = item.send(attribute)).present? ? raw_content : "&mdash;".html_safe
     end
 
     def table_selector(attribute, item)
@@ -151,7 +151,7 @@ module Admin
     end
 
     def table_tree_field(attribute, item)
-      item.parent ? item.parent.to_label : "&#mdash;".html_safe
+      item.parent ? item.parent.to_label : "&mdash;".html_safe
     end
 
     def table_position_field(attribute, item, connector = " / ")

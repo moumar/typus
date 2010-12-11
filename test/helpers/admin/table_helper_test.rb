@@ -183,14 +183,14 @@ class Admin::TableHelperTest < ActiveSupport::TestCase
   should_eventually "table_tree_field_when_displays_a_parent" do
     page = Factory(:page)
     output = table_tree_field("test", page)
-    expected = "<td>&#mdash;</td>"
+    expected = "<td>&mdash;</td>"
     assert_equal expected, output
   end
 
   should_eventually "table_tree_field_when_displays_a_children" do
     page = Factory(:page, :status => "unpublished")
     output = table_tree_field("test", page)
-    expected = "<td>&#mdash;</td>"
+    expected = "<td>&mdash;</td>"
     assert_equal expected, output
   end
 
